@@ -43,7 +43,63 @@
     </p>
 
     <h2>$300 Monthly • $500 Lifetime</h2>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+<div style="margin-top:20px; text-align:center;">
 
+  <h3>Join Godlypips Innercircle</h3>
+
+  <p><strong>$300 (1 Month Access)</strong></p>
+  <button onclick="payWithPaystackMonthly()"
+    style="padding:15px 25px; background:black; color:white; border:none; border-radius:8px; cursor:pointer;">
+    Pay in Naira
+  </button>
+
+  <br/><br/>
+
+  <p><strong>$500 (Lifetime Access)</strong></p>
+  <button onclick="payWithPaystackLifetime()"
+    style="padding:15px 25px; background:black; color:white; border:none; border-radius:8px; cursor:pointer;">
+    Pay in Naira
+  </button>
+
+  <br/><br/>
+
+  <a href="https://wa.me/2348134791422" target="_blank">
+    <button style="padding:15px 25px; background:green; color:white; border:none; border-radius:8px;">
+      Pay with USDT (TRC20 / BEP20)
+    </button>
+  </a>
+i
+</div>
+    <script>
+
+function payWithPaystackMonthly(){
+  var handler = PaystackPop.setup({
+    key: "pk_test_2700ddfa9febd36a2d3a3b138a02cfee07375a4c",
+    email: "customer@email.com",
+    amount: 30000000,
+    currency: "NGN",
+    callback: function(response){
+      alert('Payment successful!');
+    }
+  });
+  handler.openIframe();
+}
+
+function payWithPaystackLifetime(){
+  var handler = PaystackPop.setup({
+    key: "pk_test_2700ddfa9febd36a2d3a3b138a02cfee07375a4c",
+    email: "customer@email.com",
+    amount: 50000000,
+    currency: "NGN",
+    callback: function(response){
+      alert('Payment successful!');
+    }
+  });
+  handler.openIframe();
+}
+
+</script>
     <a class="btn" href="https://wa.me/2348134791422">
       Join Mentorship on WhatsApp
     </a>
